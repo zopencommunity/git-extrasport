@@ -1,3 +1,17 @@
+diff --git a/bin/git-summary b/bin/git-summary
+index f90adf1..b5132ae 100755
+--- a/bin/git-summary
++++ b/bin/git-summary
+@@ -141,7 +141,8 @@ format_authors() {
+       printf "%s♪%2.1f%%\n", args[i], 100 * args[i] / sum
+     }
+   }
+-  ' | column -t -s♪ | sed "s/\\\x09/\t/g"
++  ' | awk -F'♪' '{ printf "%-40s%-40s\n", $1, $2 }' | sed "s/\\\x09/\t/g"
++
+ }
+ 
+ #
 diff --git a/check_dependencies.sh b/check_dependencies.sh
 index 05c2f73..bd2d543 100755
 --- a/check_dependencies.sh

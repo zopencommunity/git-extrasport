@@ -4,6 +4,7 @@
 # export ZOPEN_STABLE_TAG="v${GIT-EXTRAS_VERSION}"
 export ZOPEN_STABLE_URL="https://github.com/tj/git-extras.git"
 export ZOPEN_STABLE_DEPS="make bash git coreutils"
+export ZOPEN_STABLE_TAG="7.3.0"
 export ZOPEN_DEV_DEPS="bash"
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_RUNTIME_DEPS="bash git"
